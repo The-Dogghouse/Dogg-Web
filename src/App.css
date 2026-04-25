@@ -1,0 +1,84 @@
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem;
+}
+
+p {
+  margin: 0;
+}
+
+.window-body {
+  padding: 0.5rem;
+  margin: 0;
+
+  display: flex;
+  overflow: auto;
+
+}
+
+.desktop {
+  width: 100vw;
+  height: 100vh;
+  background-color: #008080;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(0,0,0,0.08) 1px, transparent 0);
+  background-size: 4px 4px;
+  overflow: hidden;
+  font-family: 'Pixelated MS Sans Serif', 'MS Sans Serif', Arial, sans-serif;
+}
+
+.desktop-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  width: 80px;
+}
+
+.desktop-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  width: 72px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.desktop-icon:hover,
+.desktop-icon:focus {
+  background: rgba(0, 0, 128, 0.4);
+  outline: 1px dotted white;
+}
+
+.desktop-icon-img {
+  font-size: 32px;
+  line-height: 1;
+  filter: drop-shadow(1px 1px 0 rgba(0,0,0,0.5));
+}
+
+.desktop-icon-label {
+  color: white;
+  font-size: 11px;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  word-break: break-word;
+  line-height: 1.2;
+  font-family: 'Pixelated MS Sans Serif', Arial, sans-serif;
+}
+
+.window {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Fix double scrollbar buttons */
+.window ::-webkit-scrollbar-button {
+  display: none;
+}
