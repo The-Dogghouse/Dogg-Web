@@ -6,9 +6,11 @@ import { Window } from './components/Window'
 import { Taskbar } from './components/Taskbar'
 import { About } from './components/pages/About'
 import { Events } from './components/pages/Events'
+import { Clicker } from './components/pages/Clicker'
 import dogghouseLogo from './assets/logo.png'
 import doggLogo from './assets/dog-logo.png'
 import calendarIcon from './assets/calendar-icon.png'
+import petSimulatorIcon from './assets/pet-simulator-icon.png';
 import * as React from "react";
 
 // Dog reference: https://models.spriters-resource.com/3ds/thelegendofzeldamajorasmask3d/asset/303265/
@@ -19,6 +21,7 @@ interface WindowConfig {
   label: string,
   defaultX: number
   defaultY: number
+
   defaultWidth: number
   defaultHeight: number
   content: React.ReactNode
@@ -27,12 +30,14 @@ interface WindowConfig {
 
 const WINDOW_DEFS: Omit<WindowConfig, 'content'>[] = [
   {id: 'about', title: 'About', label: 'About', defaultX: 60, defaultY: 40, defaultWidth: 420, defaultHeight: 320, logo: dogghouseLogo},
-  {id: 'events', title: 'Events', label: 'Events', defaultX: 160, defaultY: 100, defaultWidth: 400, defaultHeight: 340, logo: calendarIcon}
+  {id: 'events', title: 'Events', label: 'Events', defaultX: 160, defaultY: 100, defaultWidth: 400, defaultHeight: 340, logo: calendarIcon},
+  {id: 'clicker', title: 'Dog Petter', label: 'Dog Petter', defaultX: 260, defaultY: 160, defaultWidth: 400, defaultHeight: 400, logo: petSimulatorIcon}
 ]
 
 const CONTENT_MAP: Record<string, React.ReactNode> = {
   about:   <About />,
   events:  <Events />,
+  clicker: <Clicker />,
 }
 
 
@@ -72,7 +77,7 @@ export default function App() {
             className="desktop-icon"
             onDoubleClick={() => openWindow(config.id)}
           >
-            <span className="desktop-icon-img">{(config.logo) ? <img src={config.logo} alt={config.label} /> : ""}</span>
+            <span className="desktop-icon-img">{(config.logo) ? <img width={64} height={64} src={config.logo} alt={config.label} /> : ""}</span>
             <span className="desktop-icon-label">{config.label}</span>
           </button>
         ))}

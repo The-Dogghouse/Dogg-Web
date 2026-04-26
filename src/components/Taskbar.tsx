@@ -9,7 +9,8 @@ interface TaskbarProps {
 
 const MENU_ITEMS = [
   { id: 'about', label: 'About the Server' },
-  { id: 'events', label: 'Events' }
+  { id: 'events', label: 'Events' },
+  { id: 'clicker', label: 'Petting Simulator' }
 ]
 
 export function Taskbar({ openWindows, minimizedIds, onOpenWindow }: TaskbarProps) {
