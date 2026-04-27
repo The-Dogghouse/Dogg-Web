@@ -7,10 +7,12 @@ import { Taskbar } from './components/Taskbar'
 import { About } from './components/pages/About'
 import { Events } from './components/pages/Events'
 import { Clicker } from './components/pages/Clicker'
+import { Leaderboard } from './components/pages/Leaderboard'
 import dogghouseLogo from './assets/logo.png'
 import doggLogo from './assets/dog-logo.png'
 import calendarIcon from './assets/calendar-icon.png'
-import petSimulatorIcon from './assets/pet-simulator-icon.png';
+import petSimulatorIcon from './assets/pet-simulator-icon.png'
+import leaderboardIcon from './assets/leaderboard-logo.png';
 import * as React from "react";
 
 // Dog reference: https://models.spriters-resource.com/3ds/thelegendofzeldamajorasmask3d/asset/303265/
@@ -31,13 +33,15 @@ interface WindowConfig {
 const WINDOW_DEFS: Omit<WindowConfig, 'content'>[] = [
   {id: 'about', title: 'About', label: 'About', defaultX: 60, defaultY: 40, defaultWidth: 420, defaultHeight: 320, logo: dogghouseLogo},
   {id: 'events', title: 'Events', label: 'Events', defaultX: 160, defaultY: 100, defaultWidth: 400, defaultHeight: 340, logo: calendarIcon},
-  {id: 'clicker', title: 'Dog Petter', label: 'Dog Petter', defaultX: 260, defaultY: 160, defaultWidth: 400, defaultHeight: 400, logo: petSimulatorIcon}
+  {id: 'clicker', title: 'Dog Petter', label: 'Dog Petter', defaultX: 260, defaultY: 160, defaultWidth: 400, defaultHeight: 475, logo: petSimulatorIcon},
+  {id: 'leaderboard', title: 'Leaderboard', label: 'Leaderboard', defaultX: 360, defaultY: 220, defaultWidth: 400, defaultHeight: 400, logo: leaderboardIcon},
 ]
 
 const CONTENT_MAP: Record<string, React.ReactNode> = {
-  about:   <About />,
-  events:  <Events />,
-  clicker: <Clicker />,
+    about: <About/>,
+    events: <Events/>,
+    clicker: <Clicker/>,
+    leaderboard: <Leaderboard/>,
 }
 
 
