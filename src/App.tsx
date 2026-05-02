@@ -8,6 +8,7 @@ import { About } from './components/pages/About'
 import { Events } from './components/pages/Events'
 import { Clicker } from './components/pages/Clicker'
 import { Leaderboard } from './components/pages/Leaderboard'
+import { Settings } from './components/pages/Settings'
 import { ClippyComponent } from './components/Clippy'
 import { RetroCursor } from './components/RetroCursor'
 import dogghouseLogo from './assets/logo.png'
@@ -15,6 +16,7 @@ import doggLogo from './assets/dog-logo.png'
 import calendarIcon from './assets/calendar-icon.png'
 import petSimulatorIcon from './assets/pet-simulator-icon.png'
 import leaderboardIcon from './assets/leaderboard-logo.png';
+import settingsIcon from './assets/settings-icon.png';
 import * as React from "react";
 
 // Dog reference: https://models.spriters-resource.com/3ds/thelegendofzeldamajorasmask3d/asset/303265/
@@ -37,20 +39,22 @@ const WINDOW_DEFS: Omit<WindowConfig, 'content'>[] = [
   {id: 'events', title: 'Events', label: 'Events', defaultX: 160, defaultY: 100, defaultWidth: 400, defaultHeight: 340, logo: calendarIcon},
   {id: 'clicker', title: 'Dog Petter', label: 'Dog Petter', defaultX: 260, defaultY: 160, defaultWidth: 400, defaultHeight: 475, logo: petSimulatorIcon},
   {id: 'leaderboard', title: 'Leaderboard', label: 'Leaderboard', defaultX: 360, defaultY: 220, defaultWidth: 400, defaultHeight: 400, logo: leaderboardIcon},
+  {id: 'settings', title: 'Settings', label: 'Settings', defaultX: 460, defaultY: 280, defaultWidth: 400, defaultHeight: 320, logo: settingsIcon},
 ]
-
-const CONTENT_MAP: Record<string, React.ReactNode> = {
-    about: <About/>,
-    events: <Events/>,
-    clicker: <Clicker/>,
-    leaderboard: <Leaderboard/>,
-}
-
 
 export default function App() {
   const [openIds, setOpenIds] = useState<string[]>([])
   const [focusOrder, setFocusOrder] = useState<string[]>([])
   const [minimizedIds, setMinimizedIds] = useState<Set<string>>(new Set())
+  const [cursorEnabled, setCursorEnabled] = useState(localStorage.getItem('cursorEnabled') === 'true')
+
+  const CONTENT_MAP: Record<string, React.ReactNode> = {
+    about: <About/>,
+    events: <Events/>,
+    clicker: <Clicker/>,
+    leaderboard: <Leaderboard/>,
+    settings: <Settings cursorEnabled={cursorEnabled} onCursorToggle={setCursorEnabled}/>,
+  }
 
   const openWindow = useCallback((id: string) => {
     setOpenIds(prev => prev.includes(id) ? prev : [...prev, id])
@@ -115,7 +119,7 @@ export default function App() {
 
       <Taskbar openWindows={openWindows} minimizedIds={minimizedIds} onOpenWindow={openWindow} />
       <ClippyComponent />
-      <RetroCursor />
+      {cursorEnabled && <RetroCursor />}
     </section>
   )
 }
