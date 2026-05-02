@@ -27,7 +27,7 @@ export function Events() {
 
         <fieldset style={{display: 'flex', flexDirection: 'column'}}>
             <legend>Games</legend>
-            <h4>Wednesday - 8pm</h4>
+            <h4>Monday - 7pm</h4>
             <img style={{maxWidth: "256px", maxHeight: "128px", alignSelf: 'center'}} src={archipelagoIcon} alt="Icon of Archipelago"/>
             <p style={{marginTop: '1rem'}}>
                 Join members of the Dogghouse as we make a huge mess of the visions of several game developers,
