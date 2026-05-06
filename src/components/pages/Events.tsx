@@ -1,5 +1,6 @@
 import calendarIcon from '../../assets/calendar-icon.png'
 import archipelagoIcon from '../../assets/archipelago-logo.png'
+import gameIcon from '../../assets/plate-up-logo.png'
 
 export function Events() {
   return (
@@ -27,8 +28,17 @@ export function Events() {
 
         <fieldset style={{display: 'flex', flexDirection: 'column'}}>
             <legend>Games</legend>
+
+            <h4>Wednesday - 8pm</h4>
+            <img style={{maxWidth: "256px", maxHeight: "128px", alignSelf: 'center', imageRendering: 'pixelated'}} src={gameIcon} alt={"Icon for the Wednesday game"} />
+            <p style={{marginTop: '1rem'}}>
+                Join members of the Dogghouse as we get our kitchen certifications faster then what should be legally
+                possible. Embark on a friendship testing journey as we chop onions, extinguish fires, and stretch the
+                definition of 'well-done' long enough to get shut down because we forgot a single piece of broccoli
+            </p>
+
             <h4>Monday - 7pm</h4>
-            <img style={{maxWidth: "256px", maxHeight: "128px", alignSelf: 'center'}} src={archipelagoIcon} alt="Icon of Archipelago"/>
+            <img style={{maxWidth: "256px", maxHeight: "128px", alignSelf: 'center', imageRendering: 'pixelated'}} src={archipelagoIcon} alt="Icon of Archipelago"/>
             <p style={{marginTop: '1rem'}}>
                 Join members of the Dogghouse as we make a huge mess of the visions of several game developers,
                 work with limited tools across multiple games, and support each other with random bundles of cash
