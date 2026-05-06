@@ -37,7 +37,7 @@ export function Events() {
                 definition of 'well-done' long enough to get shut down because we forgot a single piece of broccoli
             </p>
 
-            <h4>Monday - 7pm</h4>
+            <h4 style={{marginTop: '1.5rem'}}>Monday - 7pm</h4>
             <img style={{maxWidth: "256px", maxHeight: "128px", alignSelf: 'center', imageRendering: 'pixelated'}} src={archipelagoIcon} alt="Icon of Archipelago"/>
             <p style={{marginTop: '1rem'}}>
                 Join members of the Dogghouse as we make a huge mess of the visions of several game developers,
