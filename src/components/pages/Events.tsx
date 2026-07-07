@@ -1,6 +1,6 @@
 import calendarIcon from '../../assets/calendar-icon.png'
 import archipelagoIcon from '../../assets/archipelago-logo.png'
-import gameIcon from '../../assets/plate-up-logo.png'
+import gameIcon from '../../assets/minecraft-logo.png'
 
 export function Events() {
   return (
@@ -32,9 +32,10 @@ export function Events() {
             <h4>Wednesday - 8pm</h4>
             <img style={{maxWidth: "256px", maxHeight: "128px", alignSelf: 'center', imageRendering: 'pixelated'}} src={gameIcon} alt={"Icon for the Wednesday game"} />
             <p style={{marginTop: '1rem'}}>
-                Join members of the Dogghouse as we get our kitchen certifications faster then what should be legally
-                possible. Embark on a friendship testing journey as we chop onions, extinguish fires, and stretch the
-                definition of 'well-done' long enough to get shut down because we forgot a single piece of broccoli
+                Join members of the Dogghouse as we larp as professional survivalists while living in dirt holes,
+                get derailed for three hours establishing a complex storage system for wheat, establish at best
+                questionably ethical villager 'communities', build amalgamations of cogs and belts that cannot be
+                comprehended by the human mind, only to lose it all by staging a robbery of a bunch of Nether Pigs.
             </p>
 
             <h4 style={{marginTop: '1.5rem'}}>Monday - 7pm</h4>
