@@ -38,7 +38,7 @@ export function Events() {
                 comprehended by the human mind, only to lose it all by staging a robbery of a bunch of Nether Pigs.
             </p>
 
-            <h4 style={{marginTop: '1.5rem'}}>Monday - 7pm</h4>
+            <h4 style={{marginTop: '1.5rem'}}>Monday - 8pm</h4>
             <img style={{maxWidth: "256px", maxHeight: "128px", alignSelf: 'center', imageRendering: 'pixelated'}} src={archipelagoIcon} alt="Icon of Archipelago"/>
             <p style={{marginTop: '1rem'}}>
                 Join members of the Dogghouse as we make a huge mess of the visions of several game developers,
