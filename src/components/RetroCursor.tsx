@@ -5,7 +5,7 @@ interface Props {
   size?: number
 }
 
-export function RetroCursor({ src = '/cursors/cursor.gif', size = 32 }: Props) {
+export function RetroCursor({ src = '/cursors/Boner.png', size = 32 }: Props) {
   const imgRef = useRef<HTMLImageElement>(null)
   const [failed, setFailed] = useState(false)
 
