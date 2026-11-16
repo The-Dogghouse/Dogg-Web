@@ -1,5 +1,4 @@
 import calendarIcon from '../../assets/calendar-icon.png'
-import archipelagoIcon from '../../assets/archipelago-logo.png'
 import zomboidIcon from '../../assets/zomboid.png'
 
 export function Events() {
@@ -36,14 +35,6 @@ export function Events() {
                 Explore new basements, floors and bunkers. Try your hand in building up a whole medieval economy of
                 blacksmiths and pottery. Only to die in a high-speed car accident because a pole appeared 6 feet in
                 front of you in the middle of the highway
-            </p>
-
-            <h4 style={{marginTop: '1.5rem'}}>Monday - 8pm</h4>
-            <img style={{maxWidth: "256px", maxHeight: "128px", alignSelf: 'center', imageRendering: 'pixelated'}} src={archipelagoIcon} alt="Icon of Archipelago"/>
-            <p style={{marginTop: '1rem'}}>
-                Join members of the Dogghouse as we make a huge mess of the visions of several game developers,
-                work with limited tools across multiple games, and support each other with random bundles of cash
-                and seashells, only to die because someone pressed CTRL+Z in Paint
             </p>
         </fieldset>
 
