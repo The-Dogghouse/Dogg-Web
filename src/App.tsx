@@ -6,6 +6,7 @@ import { Window } from './components/Window'
 import { Taskbar } from './components/Taskbar'
 import { About } from './components/pages/About'
 import { Events } from './components/pages/Events'
+import { History } from './components/pages/History'
 import { Clicker } from './components/pages/Clicker'
 import { Leaderboard } from './components/pages/Leaderboard'
 import { Settings } from './components/pages/Settings'
@@ -16,6 +17,7 @@ import doggLogo from './assets/dog-logo.png'
 import calendarIcon from './assets/calendar-icon.png'
 import petSimulatorIcon from './assets/pet-simulator-icon.png'
 import leaderboardIcon from './assets/leaderboard-logo.png';
+import pastEventsIcon from './assets/past-events-icon.png'
 import settingsIcon from './assets/settings-icon.png';
 import * as React from "react";
 
@@ -36,7 +38,8 @@ interface WindowConfig {
 
 const WINDOW_DEFS: Omit<WindowConfig, 'content'>[] = [
   {id: 'about', title: 'About', label: 'About', defaultX: 60, defaultY: 40, defaultWidth: 420, defaultHeight: 320, logo: dogghouseLogo},
-  {id: 'events', title: 'Events', label: 'Events', defaultX: 160, defaultY: 100, defaultWidth: 400, defaultHeight: 340, logo: calendarIcon},
+  {id: 'events', title: 'Events', label: 'Events', defaultX: 160, defaultY: 100, defaultWidth: 500, defaultHeight: 540, logo: calendarIcon},
+  {id: 'history', title: 'History', label: 'History', defaultX: 210, defaultY: 130, defaultWidth: 400, defaultHeight: 340, logo: pastEventsIcon},
   {id: 'clicker', title: 'Dog Petter', label: 'Dog Petter', defaultX: 260, defaultY: 160, defaultWidth: 400, defaultHeight: 475, logo: petSimulatorIcon},
   {id: 'leaderboard', title: 'Leaderboard', label: 'Leaderboard', defaultX: 360, defaultY: 220, defaultWidth: 400, defaultHeight: 400, logo: leaderboardIcon},
   {id: 'settings', title: 'Settings', label: 'Settings', defaultX: 460, defaultY: 280, defaultWidth: 400, defaultHeight: 320, logo: settingsIcon},
@@ -51,6 +54,7 @@ export default function App() {
   const CONTENT_MAP: Record<string, React.ReactNode> = {
     about: <About/>,
     events: <Events/>,
+    history: <History/>,
     clicker: <Clicker/>,
     leaderboard: <Leaderboard/>,
     settings: <Settings cursorEnabled={cursorEnabled} onCursorToggle={setCursorEnabled}/>,
