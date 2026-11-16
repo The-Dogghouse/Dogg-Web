@@ -1,6 +1,6 @@
 import calendarIcon from '../../assets/calendar-icon.png'
 import archipelagoIcon from '../../assets/archipelago-logo.png'
-import gameIcon from '../../assets/minecraft-logo.png'
+import zomboidIcon from '../../assets/zomboid.png'
 
 export function Events() {
   return (
@@ -30,12 +30,12 @@ export function Events() {
             <legend>Games</legend>
 
             <h4>Wednesday - 8pm</h4>
-            <img style={{maxWidth: "256px", maxHeight: "128px", alignSelf: 'center', imageRendering: 'pixelated'}} src={gameIcon} alt={"Icon for the Wednesday game"} />
+            <img style={{maxWidth: "347px", alignSelf: 'center', imageRendering: 'pixelated'}} src={zomboidIcon} alt={"Icon for the Wednesday game"} />
             <p style={{marginTop: '1rem'}}>
-                Join members of the Dogghouse as we larp as professional survivalists while living in dirt holes,
-                get derailed for three hours establishing a complex storage system for wheat, establish at best
-                questionably ethical villager 'communities', build amalgamations of cogs and belts that cannot be
-                comprehended by the human mind, only to lose it all by staging a robbery of a bunch of Nether Pigs.
+                Join members of the Dogghouse as we return to Knox Country. Experience the no longer invisible animals.
+                Explore new basements, floors and bunkers. Try your hand in building up a whole medieval economy of
+                blacksmiths and pottery. Only to die in a high-speed car accident because a pole appeared 6 feet in
+                front of you in the middle of the highway
             </p>
 
             <h4 style={{marginTop: '1.5rem'}}>Monday - 8pm</h4>
